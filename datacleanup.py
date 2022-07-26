@@ -25,9 +25,9 @@ df = df.dropna()
 print(f"Shape after Rows cleaned{df.shape}")
 
 #Remove cols with bad data. Uncomment this to see what happens
-df = df.apply(pd.to_numeric, errors='coerce',axis=1)
-df = df.dropna(axis=1)
-print(f"Shape after columns cleaned{df.shape}")
+#df = df.apply(pd.to_numeric, errors='coerce',axis=1)
+#df = df.dropna(axis=1)
+#print(f"Shape after columns cleaned{df.shape}")
 
 #rename the column y10 to y8
 df = df.rename(columns={'y10': 'y8'})

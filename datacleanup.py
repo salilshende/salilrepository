@@ -5,8 +5,7 @@ import pandas as pd
 trainDataList = pd.read_csv('train.csv')
 
 #print shape of trainDataList
-trainDataListshape = trainDataList.shape
-print('trainDataListshape:', trainDataListshape)
+print("Shape of trainDataList :", trainDataList.shape)
 
 #Create dataframe from trainDataList
 df = pd.DataFrame(trainDataList)
@@ -22,7 +21,7 @@ print('Successfully removed three columns having bad data from train.csv')
 #Remove rows that has bad data
 df = df.apply(pd.to_numeric, errors='coerce')
 df = df.dropna()
-print(f"Shape after Rows cleaned{df.shape}")
+print("Shape after Rows cleaned :", df.shape)
 
 #Remove cols with bad data. Uncomment this to see what happens
 #df = df.apply(pd.to_numeric, errors='coerce',axis=1)
